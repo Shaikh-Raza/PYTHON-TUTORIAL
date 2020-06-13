@@ -1,130 +1,130 @@
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <style>
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+      
+      
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
+  font-family: 'Montserrat',sans-serif;
 }
 nav{
-  background: #0082e6;
-  height: 80px;
-  width: 100%;
-}
-label.logo{
-  color: #f2f2f2;
-  font-size: 33px;
-  line-height: 80px;
-  padding: 0 140px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  background: #151515;
+  padding: 5px 40px;
 }
 nav ul{
-  float: right;
-  margin-right: 60px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 2px;
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
 }
 nav ul li a{
-  color: #f2f2f2;
-  font-weight: 500;
-  font-size: 20px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  /* text-transform: uppercase; */
-  font-family: 'Poppins', sans-serif;
-}
-a.active,a:hover{
-  background: #1b9bff;
-  transition: .5s;
-}
-.checkbtn{
-  font-size: 30px;
   color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: cyan;
+}
+nav ul li i{
+  font-size: 23px;
+}
+nav ul li.btn{
   display: none;
 }
-#check{
-  display: none;
+nav ul li.btn.hide i:before{
+  content: '\f00d';
 }
-@media (max-width: 952px){
-  label.logo{
-    font-size: 27px;
-    padding-left: 25px;
+@media all and (max-width: 900px){
+  nav{
+    padding: 5px 30px;
   }
-  nav ul li a{
-    font-size: 16px;
-  }
-}
-@media (max-width: 858px){
-  .checkbtn{
-    display: block;
-    margin-right: 40px;
-  }
-  ul{
-    position: fixed;
+  nav ul li.items{
     width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
+    display: none;
   }
-  nav ul li{
+  nav ul li.items.show{
     display: block;
-    margin: 50px 0;
-    line-height: 30px;
   }
-  nav ul li a{
-    font-size: 20px;
+  nav ul li.btn{
+    display: block;
   }
-  a:hover,a.active{
-    background: none;
-    color: #0082e6;
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
   }
-  #check:checked ~ ul{
-    left: 0;
+  nav ul li.items:hover:after{
+    opacity: 0;
   }
-}
-section{
-  background: url(bg1.jpg) no-repeat;
-  background-size: cover;
-  height: calc(100vh - 80px);
 }
 
     </style>
-    <title>Responsive Navbar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo">C Programming</label>
       <ul>
-<li><a class="active" href="#">Home</a></li>
-<li><a href="#">Content</a></li>
-<li><a href="#">Chapters</a></li>
-<li><a href="#">Contact</a></li>
+<li class="logo">CodingNepal</li>
+<li class="items"><a href="#">Home</a></li>
+<li class="items"><a href="#">About</a></li>
+<li class="items"><a href="#">Blogs</a></li>
+<li class="items"><a href="#">Contact</a></li>
+<li class="items"><a href="#">Feedback</a></li>
+<li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
 </ul>
 </nav>
-    <section></section>
+    <script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+    </script>
   </body>
 </html>
-
