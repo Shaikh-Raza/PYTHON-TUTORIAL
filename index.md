@@ -61,10 +61,10 @@ ENTER THE NUMBER :6
 FACTORIAL IS :720
 ```
 
-| Sr No.       | Program  | Developed By   |Year|Sr No.       | Program  | Developed By   |Year| Uses For |
-| :-:| :------: | :------------: |:--:| :-:| :------: | :------------: |:--:|:-:|
-| 1 | Java Program|  **James Gosling** |1994|1 | Java Program|  **James Gosling** |1994| Android app |
-| 2         | C Program    |  **Dennis Ritchie** |1970|2         | C Program    |  **Dennis Ritchie** |1970| Compilers and Assemblers|
+| Sr No.       | Program  | Developed By   |Year | Uses For |
+| :-:| :------: | :------------: |:--:| :-:| 
+| 1 | Java Program|  **James Gosling** |1994| Android app |
+| 2         | C Program    |  **Dennis Ritchie** |1970| Compilers and Assemblers|
  
 
 
