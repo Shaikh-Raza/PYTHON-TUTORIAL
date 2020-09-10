@@ -69,6 +69,6 @@ FACTORIAL IS :720
 | 2         | C Program    |  **Dennis Ritchie** |1970|2         | C Program    |  **Dennis Ritchie** |1970| Compilers and Assemblers|
 ***
 
-> Blockquotes are very handy to emulate reply text.  > This line is part of the same quote. Quote break. > This is a very long line that is still quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote
+Blockquotes are very handy to emulate reply text.  > This line is part of the same quote. Quote break. > This is a very long line that is still quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote
 
 
