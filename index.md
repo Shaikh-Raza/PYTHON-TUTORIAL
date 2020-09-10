@@ -1,5 +1,5 @@
  
-#Java Practice Programs 
+# Java Practice Programs 
 ### 1. *Write a Program to Addition of two Number in Java* .
 
 ```java
