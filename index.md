@@ -62,7 +62,7 @@ public class Main
 ENTER THE NUMBER :6
 FACTORIAL IS :720
 ```
-***
+
 | Sr No.       | Program  | Developed By   |Year|Sr No.       | Program  | Developed By   |Year| Uses For |
 | :-:| :------: | :------------: |:--:| :-:| :------: | :------------: |:--:|:-:|
 | 1 | Java Program|  **James Gosling** |1994|1 | Java Program|  **James Gosling** |1994| Android app |
@@ -70,5 +70,5 @@ FACTORIAL IS :720
 ***
 
 > Blockquotes are very handy to emulate reply text.  > This line is part of the same quote. Quote break. > This is a very long line that is still quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote
----
+
 
