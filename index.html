@@ -177,6 +177,23 @@ section{
   background-size: cover;
   height: calc(100vh - 80px);
 }
+      
+      
+      
+      
+      .content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
   
 </style>
 </head>
@@ -190,9 +207,9 @@ section{
       <label class="logo">Courses</label>
       <ul>
         <li><a class="active" href="#"><i class="fa fa-home"></i>Home</a></li>
-        <li><a href="#"><i class="fa fa-fas fa-clipboard-check"></i>About</a></li>
+        <li><a href="#"><i class="fa fa-fw fa-wrench"></i>About</a></li>
         <li><a href="#"><i class="fa fa-fas fa-file-code"></i>Courses</a></li>
-        <li><a href="#"><i class="fa fa-phone-square-alt"></i>Contact</a></li>
+        <li><a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
         <li><a href="#"><i class="fa fa-fab fa-cc-amazon-pay"></i>Donate Us</a></li>
       </ul>
     </nav>
@@ -232,6 +249,20 @@ section{
 <div class="footer">
   <h2>Footer</h2>
 </div>
+      <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 
 </body>
 </html>
