@@ -32,7 +32,8 @@ body{
   font-family: montserrat;
 }
 nav{
-  background: #0082e6;
+   background:#AFEEEE;
+/*  background: #0082e6; */
   height: 80px;
   width: 100%;
 }
@@ -60,8 +61,8 @@ nav ul li a{
   text-transform: uppercase;
 }
 a.active,a:hover{
-  
-    border-bottom: 3px solid red;
+  background: #00ffff;
+  transition: .5s;
 }
 .checkbtn{
   font-size: 30px;
@@ -81,7 +82,7 @@ a.active,a:hover{
     padding-left: 50px;
   }
   nav ul li a{
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 @media (max-width: 858px){
@@ -118,19 +119,32 @@ a.active,a:hover{
   
 /* Style the header */
 .header {
-  padding: 100px;
- font-size:20px;
+  padding: 80px;
   text-align: center;
- background: black; 
+ /* background: #1abc9c; */
   color: white;
 }
 
 /* Increase the font size of the h1 element */
 .header h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
   
   
+ 
+ 
+ 
+ .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+}
+ 
+ 
+ 
+ 
   
 
 .glow {
@@ -166,7 +180,7 @@ a.active,a:hover{
  
  
  
-
+ 
  
  
  
@@ -204,13 +218,15 @@ a.active,a:hover{
       </ul>
     </nav>
 
-<div class="header">
-  <h1 class="glow">Passion Education</h1>
-  <p>Build skills with Free courses, certificates online </p>
- <h2><b>Your Course to Success</b></h2>
-
-</div>
+ <div class="container">
+  <img src="logoback.jpg" alt="Snow" style="width:100%;">
  
+ 
+<div class="header">
+  <h1>Passion Education</h1>
+  <p>Build skills with Free courses, certificates online </p>
+</div>
+ </div>
  
  
  
