@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">  
  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
   
@@ -19,13 +20,13 @@ body{
   font-family: montserrat;
 }
 nav{
- background:#40E0D0;
+ background:black;
  /*background: #0082e6; */
   height: 80px;
   width: 100%;
 }
 label.logo{
-  color: white;
+  color: red;
   font-size: 35px;
   line-height: 80px;
   padding: 0 100px;
@@ -41,7 +42,7 @@ nav ul li{
   margin: 0 5px;
 }
 nav ul li a{
-  color: white;
+  color: yellow;
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
@@ -52,7 +53,7 @@ a.active,a:hover{
 }
 .checkbtn{
   font-size: 30px;
-  color: white;
+  color: red;
   float: right;
   line-height: 80px;
   margin-right: 40px;
@@ -79,7 +80,7 @@ a.active,a:hover{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #2c3e50;
+    background: black;
     top: 80px;
     left: -100%;
     text-align: center;
@@ -95,36 +96,19 @@ a.active,a:hover{
    padding :5px;
   }
   a:hover,a.active{
-    background: none;
+    background: red;
    color: #0082e6;
   }
   #check:checked ~ ul{
     left: 0;
   }
-} 
-  
- 
- 
- /* background image*/
- 
- 
- 
- .image {
-  background-image: url("logo.png");
-  background-color: #cccccc;
-  height: 280px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
- 
- }
+}
   
 /* Style the header */
 .header {
   padding: 80px;
   text-align: center;
-  
+  background: black;
   color: white;
 }
 
@@ -159,6 +143,45 @@ a.active,a:hover{
  
  
  
+ 
+ 
+ 
+ 
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px;
+  border-left: 1px;
+  
+
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+ 
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ 
+ 
 </style>
 </head>
 <body>
@@ -179,14 +202,21 @@ a.active,a:hover{
     </nav>
 
 
- <div class="image">
+ 
  
 <div class="header">
   <h1 class="glow">Passion Education</h1>
   <p>Build skills with Free courses, certificates online </p>
  <h2>Your Course to Success</h2>
+ 
+ 
+<form class="example" action="/logo.png" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search Free Courses.." name="logo.png">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
 
-</div>
+
+
  </div>
 </body>
 </html>
