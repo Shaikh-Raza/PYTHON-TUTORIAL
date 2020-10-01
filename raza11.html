@@ -1,0 +1,878 @@
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Vidaloka&display=swap" rel="stylesheet">
+
+    <title>EasyCoding:Learn to code for free & certificate</title>
+</head>
+<style>
+    
+          
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');  
+*{
+  padding:0px;
+  margin: 0px;
+  text-decoration: none;
+  font-family: 'Poppins',Sans-Serif;
+}
+.body
+{
+  justify-content: content;
+  align-items: center;
+}
+
+
+/* First Part */
+
+nav
+{
+ background-color: White;
+ height: 80px;
+ width: 100%;
+ position: fixed;
+ box-shadow: 0 5px  10px #efefef;
+ 
+}
+label.logo
+{
+  color:blue;
+  font-size: 40px;
+  line-height: 80px;
+  padding: 0 120px;
+  font-weight: 600;
+  font-family: 'Lobster', cursive;
+}
+
+nav ul
+{
+  float: right;
+  margin-right: 200px;
+}
+nav ul li
+{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a
+{
+  color:black;
+  font-size: 17px;
+  padding: 7px 13px;
+
+  
+}
+a:hover
+{
+  color:red;
+}
+.checkbtn
+{
+  font-size: 30px;
+  color: blue;
+  float:right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check
+{
+  display:none;
+}
+ @media (max-width: 952px)
+{
+  label.logo
+  {
+    font-size: 30px;
+    padding-left: 20px;
+  }
+  nav ul li a
+  {
+    font-size: 20px;
+  }
+}
+@media (max-width: 858px)
+{
+  .checkbtn
+  {
+    display: block;
+  }
+  ul
+  {
+    padding-top: 10px;
+    position: fixed;
+    width: 100%;
+    height: 300px;
+    background:LightGray;
+    top: 80px;
+    left:-100%;
+    text-align: center;
+    transition: all .9s;
+  }
+  nav ul li
+  {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    
+  }
+  nav ul li a
+  {
+    font-size: 15px;
+    padding :5px;
+    border-bottom:1px solid #efefef;
+  }
+  
+  #check:checked ~ ul
+  {
+    left:0;
+  }
+}
+.content
+{
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:-1;
+}
+.content .textBox
+{
+    position: relative;
+    max-width: 550px;
+    padding-left: 110px;
+}
+    
+.content .textBox h3 
+{
+    padding-bottom: 5px;
+    color:black;
+    font-size: 3em;
+    line-height: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+}  
+.content .textBox h3 span
+{
+    font-size: 1.5em;
+    color:red;
+}
+.content .textBox p
+{
+    color:LightSlateGray;
+    padding-bottom: 10px;
+    font-size: 20px;
+    
+}
+
+.content .textBox a
+{
+    display: inline-block;
+    margin-top: 10px;
+    padding:8px 20px;
+    background: DodgerBlue;
+    color:white;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ 
+.content .imgBox
+{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    padding-right: 130px;
+    padding-bottom: 20px;
+    padding-top: 110px;
+    margin-top: 0;
+    justify-content: flex-end;
+}
+.content .imgBox img
+{
+    max-width:500px;
+    box-shadow: 0 10px  30px LightSteelBlue;
+}
+
+.thumb{
+    position: absolute;
+    bottom: 20px;
+    margin-left: 500px;
+    transform:transition(-50%);
+    display:block;
+    height: 60px;
+    margin-top: 1140px;
+    background: none;
+    z-index: 1;
+    
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+
+
+}
+.thumb:hover{
+    transform: translateY(-15px);
+}
+
+.thumb li img{
+    max-width: 30px;
+}
+
+@media(max-width:991px)
+{
+    .content
+    {
+        flex-direction: column;
+        margin-top:0;
+        padding-top: 90px;
+        z-index: -1;
+    }
+    .content .textBox
+    {
+        position: relative;
+        max-width: 100%;
+        padding-right: 75px;
+    }
+    .content .textBox h3
+    {
+        font-size: 2em;
+        padding-left:5px;
+    }
+    .content .textBox a
+    {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .content .imgBox
+    {
+        width:100%;
+        display: flex;
+        padding-right: 0;
+        margin-top: 50px;
+        justify-content:center;
+        
+    }
+    .content .imgBox img
+    {
+        max-width: 280px;
+        height: 350px;
+    }
+    .thumb li img
+    {
+        max-width: 30px;
+        z-index: -1;
+    }
+}
+
+
+/* Starting of  Second Part */
+
+
+.head h3{
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: 500;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin-top: 50px; 
+}
+
+.head p{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+    color:LightSlateGray;
+}
+
+.courses{
+        display: flex;
+        align-items: center;
+}
+/*  Starting of  First Card  */
+
+.card1 {
+    height:259px;
+    width: 200px;
+    margin-left: 220px;
+    margin-top: 50px;
+    box-shadow:0 5px 20px LightSkyBlue;
+    border-radius: 30px;
+}
+.card1 img{
+    padding-top: 8px;
+    height: 100px;
+    width: 200px;
+    border-radius: 30px;
+}
+.card1 h2{
+    text-align: center;
+}
+.card1 h4{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.card1 #but1{
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    padding-left: 60px;
+    padding-right: 59.2px;
+    width: 200px;
+    color:white;
+    border-bottom-left-radius:30px ;
+    border-bottom-right-radius:30px ;
+    background-color: black;
+}
+
+/* Ending of First Card */
+
+
+/*  Starting of  Second Card  */
+
+.card2 {
+    height:259px;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 50px;
+    box-shadow:0 5px 20px LightSkyBlue;
+    border-radius: 30px;
+    
+}
+.card2 img{
+    height: 110px;
+    width: 200px;
+    border-radius: 30px;
+}
+.card2 h2{
+    text-align: center;
+}
+.card2 h4{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.card2 #but2{
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    padding-left: 60px;
+    padding-right: 59.2px;
+    width: 200px;
+    color:white;
+    border-bottom-left-radius:30px ;
+    border-bottom-right-radius:30px ;
+    background-color: black;
+}
+
+/* Ending of Second Card */
+
+
+/*  Starting of  Third Card  */
+
+.card3 {
+    height:259px;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 50px;
+    box-shadow:0 5px 20px LightSkyBlue;
+    border-radius: 30px;
+    
+}
+.card3 img{
+    height: 109px;
+    width: 200px;
+    border-top-left-radius:30px ;
+    border-top-right-radius:30px ;
+}
+.card3 h2{
+    text-align: center;
+}
+.card3 h4{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.card3 #but3{
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    padding-left: 60px;
+    padding-right: 59.2px;
+    width: 200px;
+    color:white;
+    border-bottom-left-radius:30px ;
+    border-bottom-right-radius:30px ;
+    background-color: black;
+}
+
+/* Ending of Third Card */
+
+/*  Starting of  Fourth Card  */
+
+.card4 {
+    height:259px;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 50px;
+    box-shadow:0 5px 20px LightSkyBlue;
+    border-radius: 30px;
+    
+}
+.card4 img{
+    height: 109px;
+    width: 200px;
+    border-top-left-radius:30px ;
+    border-top-right-radius:30px ;
+}
+.card4 h2{
+    text-align: center;
+}
+.card4 h4{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.card4 #but4{
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    padding-left: 60px;
+    padding-right: 59.2px;
+    width: 200px;
+    color:white;
+    border-bottom-left-radius:30px ;
+    border-bottom-right-radius:30px ;
+    background-color: black;
+}
+
+/*  Ending of Fourth Card  */
+
+/*  Ending of Second Part  */
+
+
+/* Starting of Third Part */
+.thirdpart{
+    margin-top: 90px;
+    display: flex;
+    width: 100%;
+    height: 580px;
+    background-color:HoneyDew;
+}
+/* Starting of left Part */
+.left img {
+    padding-top:50px;
+    height: 500px;
+    width: 700px;
+    margin-left: 90px;
+}
+
+/* Starting of right part */
+
+/* Starting of right Part */
+
+.right{
+    padding-top:90px;
+    height: 500px;
+    width: 700px;
+    margin-left: 90px;
+    
+}
+.right h2{
+    font-size: 40px;
+    color:RoyalBlue;
+}
+.right p{
+    font-size: 20px;
+    padding-bottom: 40px;
+}
+.right #run{
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border:1px solid red;
+    border-radius:20px;
+    color:white;
+    background-color: black;
+}
+
+/* Ending of right part */
+
+/* Ending of Third part */
+
+
+/* Starting of Fourth part */
+.fourthpart{
+    height: 600px;
+    
+
+}
+.part2{
+    display: flex;
+    
+}
+.part_a{
+    margin-left:200px;
+    margin-top: 100px;
+}
+.part h1{
+     font-size:30px;
+     text-align: center;
+     padding-top: 90px;
+     
+    
+}
+.part_a p{
+
+    width: 260px;
+    color:LightSlateGray;
+    text-align: left;
+}
+.part_a h3{
+    width: 260px;
+    color:black;
+    padding-bottom: 20px;
+}
+
+
+
+.part_b{
+    margin-left: 110px;
+    margin-top: 100px;
+}
+.part_b p{
+
+    width: 260px;
+    color:LightSlateGray;
+    text-align: left;
+}
+.part_b h3{
+    width: 260px;
+    color:black;
+    padding-bottom: 20px;
+}
+
+
+
+
+.part_c{
+    margin-left: 110px;
+    margin-top: 100px;
+}
+.part_c p{
+
+    width: 260px;
+    color:LightSlateGray;
+    text-align: left;
+}
+.part_c h3{
+    width: 260px;
+    color:black;
+    padding-bottom: 20px;
+}
+
+
+
+
+.lastpart{
+    height: 500px;
+    width: 100%;
+    background-color:#25265e;
+    display: flex;
+}
+.topic{
+    margin-left: 150px;
+    padding-top: 100px;
+}
+.topic h2{
+    color:white;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.topic p{
+    color:white;
+    
+}
+.tutorial{
+    color:white;
+    padding-left: 170px;
+    padding-top: 100px;
+}
+.tutorial h3{
+    padding-bottom: 30px;
+}
+.tutorial p{
+        padding-bottom: 15px;
+}
+.tutorial p a{
+    color:white;
+}
+
+
+.example{
+    color:white;
+    padding-left: 170px;
+    padding-top: 100px;
+}
+.example h3{
+    padding-bottom: 30px;
+}
+.example p{
+        padding-bottom: 15px;
+}
+.example p a{
+    color:white;
+}
+
+
+
+
+.policy{
+    color:white;
+    padding-left: 160px;
+    padding-top: 100px;
+}
+.policy h3{
+    padding-bottom: 30px;
+}
+.policy p{
+        padding-bottom: 15px;
+}
+.follow{
+   color:black;
+   display: flex;
+   height: 50px;
+   margin-left: 150px;
+   padding-bottom: 10px;
+}
+.follow img{
+    height: 20px;
+    width: 20px;
+    padding-left:10px;
+    padding-top: 20px;
+    
+}
+.follow p{
+    padding-top: 20px;
+    padding-left: 5px;
+}
+.follow .rig{
+    padding-left:700px;
+    display: flex;
+    
+}
+.follow .rig img{
+    padding-top: 5px;
+    padding-left: 15px;
+    height: 30px;
+    width: 30px;
+}
+
+</style>
+<body>
+
+          <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+      </label>
+      
+      <label class="logo">EasyCoding</label>
+
+      <ul>
+        <li><a href="#">Tutorials</a></li>  
+        <li><a href="#">Examples</a></li>
+        <li><a href="#">Quiz</a></li>
+      </ul>
+    </nav>
+            <div class="content">
+            <div class="textBox">
+                <h3 style="font-weight:900;">Learn  TO  Code  For <br><span>Free</span></h3>
+                 <h1 style="color:;font-weight:600;padding-bottom:10px;">Top Online Courses</h1>
+                <p>Learn to code with our beginner-friendly tutorials and examples. Read tutorials, try examples, write programs, and learn to code. </p>
+               <p style="color:LightSlateGray;">" Your Course to Success "</p>
+                <a href="#">View All Courses</a>
+                
+            </div>
+            <div class="imgBox">
+               <img src="22.jpg" class="pepsi"> 
+            </div>
+        </div>
+         <ul class="thumb">
+            <li><img src="1.png" onclick="imgSlider('22.jpg');changeBgcolor('#0062be')"></li>
+            <li><img src="2.png" onclick="imgSlider('01.jpg') ;changeBgcolor('#e60c2c')"></li>
+            <li><img src="3.jpg" onclick="imgSlider('22.jpg') ; changeBgcolor('black')"></li>
+                                    
+        </ul>
+    
+    
+    
+    
+    
+
+            <div class="head">
+                <h3>Learn Top Online Courses Solve Quiz & Get Certificate</h3>
+                   <p>Choosewhat to learn<br>
+                     Start learning popular programming languages.</p>
+                     
+                     <div class="courses">
+                         
+                         <div class="card1">
+                          <img src="py.jpeg">
+                            <h2>Python</h2>
+                             <h4>100% Online Course 
+                            <br> Beginners To Advanced Level</h4>
+                             <a id="but1" href="#">Start Now</a>
+                         </div>
+                         
+                         <div class="card2">
+                          <img src="java.jpeg">
+                            <h2>Java</h2>
+                             <h4>100% Online Course 
+                            <br> Beginners To Advanced Level</h4>
+                             <a id="but2" href="#">Start Now</a>
+                         </div>
+                         
+                         <div class="card3">
+                          <img src="js.png">
+                            <h2>JavaScript</h2>
+                             <h4>100% Online Course 
+                            <br> Beginners To Advanced Level</h4>
+                             <a id="but3" href="#">Start Now</a>
+                         </div>
+                        
+                         <div class="card4">
+                          <img src="c4.png">
+                            <h2>C Language </h2>
+                             <h4>100% Online Course 
+                            <br> Beginners To Advanced Level</h4>
+                             <a id="but4" href="#">Start Now</a>
+                         </div>
+                         
+                     </div>
+            </div>
+    
+    
+    
+    
+    <div class="thirdpart"> 
+    
+    <div class="left">
+        <img src="compiler.png">
+    </div>
+    <div class="right">
+        <h2>Online Compiler</h2>
+        <p>Get started <br> Now you can write and run<br> code online in your browser.</p>
+        
+        <a  id="run" href="https://www.onlinegdb.com">Run Online</a>
+    </div>
+    
+    
+    </div>
+    
+    
+    
+    <div class="fourthpart">
+        <div class="part">
+            <h1>Why EasyCoding?</h1>
+        </div>
+        <div class="part2">
+            <div class="part_a">
+                <h3>Programming made easy</h3>
+                <p>We focus on simplicity. Programming tutorials and examples written in simple, understandable language for beginners</p>
+            </div>
+            
+                        <div class="part_b">
+                <h3>Content You Can Trust</h3>
+                <p>A dedicated group of experts continually working to create programming resources that are accurate and easier to understand.</p>
+            </div>
+            
+            
+                <div class="part_c">
+                <h3>Learn by Doing</h3>
+                <p>The only way to learn to program is by writing code. We provide a lot of complete examples so that run and edit code on your own.</p>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="lastpart">
+        <div class="topic">
+            <h2>EasyCoding</h2>
+            <p>Join Free<br>For More Free Courses<br>
+            Latest Update
+            <br> add email button</p>
+            </div>
+            <div class="tutorial">
+                <h3>Tutorials</h3>
+                <p><a href="#">Python</a></p>
+                <p><a href="#">Java</a></p>
+                <p><a href="#">JavaScript</a></p>
+                <p><a href="#">C Language</a></p>
+                <p><a href="#">php & Mysql</a></p>
+                <p><a href="#">c++</a></p>
+            </div>
+            
+            
+            <div class="example">
+                <h3>Examples</h3>
+                <p><a href="#">Python Example</a></p>
+                <p><a href="#">Java Example</a></p>
+                <p><a href="#">JavaScript Example</a></p>
+                <p><a href="#">C Language Example</a></p>
+                <p><a href="#">php & Mysql Example</a></p>
+                <p><a href="#">C++ Example</a></p>
+            </div>
+
+            
+             <div class="policy">
+                <h3>Legal</h3>
+                <p>Privacy Policy</p>
+                <p>Terms & Condition</p>
+            </div>
+    </div>
+                <div class="follow">
+                    <img src="copy.png">
+                    <p>2020 All Right Reserved</p>
+                    <div class="rig">
+                <p ><a href="https://twitter.com/"><img src="twitter1.png"></a></p>
+                <p ><a href="https://www.facebook.com/"><img src="facebook.jpg"></a></p>
+                <p ><a href="https://www.instagram.com/"><img src="instagram.jpg"></a></p>
+                     </div>
+                </div>
+    <script>
+        function show_hide(){
+           var click=document.getElementById("drop-content");
+           if (click.style.display==="none"){
+               click.style.display="block","display";
+           }
+           else{
+               click.style.display="none";
+           }
+        }
+                function imgSlider(anything){
+            document.querySelector('.pepsi').src = anything;
+        }
+    
+
+    </script>
+
+</body>
+</html>
