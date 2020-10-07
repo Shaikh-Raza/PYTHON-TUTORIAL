@@ -59,7 +59,7 @@ body {
 }
  /* end of first page */
  /*  start of media file */
- @media screen and (min-width:320px) and (max-width:480ox){
+ @media screen and (min-width:320px) and (max-width:480px){
  .welcome_text {
   width: 200px;
 }
