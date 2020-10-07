@@ -60,9 +60,14 @@ body {
  /* end of first page */
  /*  start of media file */
  @media screen and (min-width:300px) and (max-width:480px){
-   body{
-      background-color:red;
-   }
+   .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color:red;
+}
  .welcome_text {
   width: 200px;
 }
