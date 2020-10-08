@@ -31,8 +31,7 @@ let questions = [
         else
             System.out.println(year + " is not a leap year.");
     }
-}
-  ",
+} ",
     answer: "Random Access Memory",
     options: [
       "Random Access Memory",
