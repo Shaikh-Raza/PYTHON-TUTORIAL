@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML EDITOR</title>
+</head>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:#e6ffff;
+}
+.top-part{
+    height: 85px;
+    background-color: #3385ff;
+    padding-bottom: 5px;
+}
+    #code
+    {
+        height:500px;
+        font-size: 15px;
+        width: 48%;
+        border-right:none;
+        color:red;
+        padding: 10px;
+        box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.4);
+        margin:8px;
+        border:none;
+        resize: none;
+        float: left;
+   }
+ 
+   .editor #output
+    {
+        float:right;
+        height:520px;
+        width:48%;
+        border:none;
+        background-color: white;
+        box-shadow:10px 10px 10px 5px rgba(0,0,0,0.4);
+        margin:8px;
+    }
+    
+    
+    
+    
+.mode{
+    position: absolute;
+    padding-top:54px;
+    display:flex;
+}
+.mode li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+
+}
+h5{
+    display: flex;
+    border:none;
+    padding: 6px;
+    border-radius:5px;
+    margin-bottom: 5px;
+    background-color: black;
+    color:white;
+    font-size: 13px;
+    font-family: Arial;
+    pointer:cursor;
+}
+h6 {
+    border:none;
+    padding: 5px;
+    border-radius:5px;
+    margin-bottom: 5px;
+    background-color: white;
+    color:black;
+    font-size: 13px;
+    font-family: Arial;
+    pointer:cursor;
+}
+h5:hover{
+    background-color: white;
+    color:black;
+}
+h6:hover{
+    background-color: black;
+    color:white;
+
+}
+
+#college
+{
+    font-size: 12px;
+    margin-right: 50px;
+    padding-top: 65px;
+    color:#ccf2ff;
+    float: right;
+}
+
+
+
+@media (max-width: 858px)
+{
+      #code
+    {
+        height:520px;
+        font-size: 15px;
+        width:96%;
+        border-right:none;
+        color:red;
+        padding: 5px;
+        box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.4);
+        margin:5px;
+        border:none;
+        resize: none;
+        float: left;
+   }
+ 
+   .editor #output
+    {
+        float:right;
+        height:520px;
+        width:98%;
+        border:none;
+        background-color: white;
+        box-shadow:10px 10px 10px 5px rgba(0,0,0,0.4);
+        margin:1px;
+    }   
+}
+</style>
+<body>
+    <div class="top-part">
+
+        <ul class="mode">
+            
+            <li><h5 onclick="changeBgcolor('black');changecolor('white')"> Dark Mode </h5></li>
+            <li><h6 onclick="changeBgcolor('white'); changecolor('darkred')">Light Mode</h6></li>
+                                    
+        </ul>
+                  <p id="college">Rizvi College of Engineering</p>
+
+    </div>
+    <div class="editor">
+        <textarea id="code">
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML, CSS and JavaScript Live demo</title>
+</head>
+<style>
+.live
+ { 
+  font-size:40px;
+  color:green;
+  padding:20px;
+ }
+</style>
+<body>
+<!-- Start your code here -->
+<p class="live">EasyCoding . . .</p>
+<!-- End your code here -->
+</body>
+</html>
+</textarea>
+<iframe id="output"></iframe>
+</div>
+</body>
+</html>
+<script>
+    function run()
+    {
+        let htmlCode=document.querySelector(".editor #code").value;
+        let cssCode="<style>"+document.querySelector(".editor #code").value+"</style>";
+        let jsCode=document.querySelector(".editor #code").value;
+        
+        output.contentDocument.body.innerHTML=htmlCode;
+        output.contentWindow.eval(jsCode);
+        
+    }
+    document.querySelector(".editor #code").addEventListener("keyup",run);
+    
+    
+    
+    
+    function changeBgcolor(color)
+    {
+            const sec = document.querySelector('#code');
+            sec.style.background=color;
+    }
+    
+    function changecolor(color)
+    {
+            const col = document.querySelector('#code');
+            col.style.color=color;
+    }
+</script>
+</html>
